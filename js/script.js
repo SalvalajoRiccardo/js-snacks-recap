@@ -15,11 +15,13 @@ while (a > b || b > numeri.length) {
 
 
 let nuoviNum = (array,part,arriv) => {
-    let filtarto = array.foreach((num,i) => {
-        if(i > part && i <= arriv)
+    let filtarto = array.filter((num,i) => {
+        if(i + 1 >= part && i + 1 <= arriv)
         return num
     });
     return filtarto;
 }
 
 nuoviNum(numeri,a,b)
+
+console.log(nuoviNum(numeri,a,b));
